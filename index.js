@@ -15,11 +15,20 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/aan', (req, res) => {
+app.get('/aan1', (req, res) => {
   motor1.writeSync(1);
+  res.send('aan1')
 })
+
+app.get('/aan2', (req, res) => {
+  motor2.writeSync(1);
+  res.send('aan2')
+})
+
 app.get('/uit', (req, res) => {
-  motor1.writeSync(2);
+  motor1.writeSync(0);
+  motor2.writeSync(0);
+  res.send('uit')
 })
 
 app.listen(port, () => {
