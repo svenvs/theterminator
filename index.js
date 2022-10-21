@@ -15,12 +15,12 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/aan1', (req, res) => {
+app.get('/schieter', (req, res) => {
   motor1.writeSync(1);
   res.send('aan1')
 })
 
-app.get('/aan2', (req, res) => {
+app.get('/feeder', (req, res) => {
   motor2.writeSync(1);
   res.send('aan2')
 })
