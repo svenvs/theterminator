@@ -21,7 +21,7 @@ app.get('/schieter', (req, res) => {
 })
 
 app.get('/schieteruit', (req, res) => {
-  motor2.writeSync(1);
+  motor2.writeSync(0);
   res.send('uit schieter')
 })
 
@@ -31,7 +31,7 @@ app.get('/feeder', (req, res) => {
 })
 
 app.get('/feederuit', (req, res) => {
-  motor1.writeSync(1);
+  motor1.writeSync(0);
   res.send('uit feeder')
 })
 
