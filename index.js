@@ -16,20 +16,26 @@ app.get('/', (req, res) => {
 })
 
 app.get('/schieter', (req, res) => {
-  motor1.writeSync(1);
-  res.send('aan1')
+  motor2.writeSync(1);
+  res.send('aan schieter')
+})
+
+app.get('/schieteruit', (req, res) => {
+  motor2.writeSync(1);
+  res.send('uit schieter')
 })
 
 app.get('/feeder', (req, res) => {
-  motor2.writeSync(1);
-  res.send('aan2')
+  motor1.writeSync(1);
+  res.send('aan feeder')
 })
 
-app.get('/uit', (req, res) => {
-  motor1.writeSync(0);
-  motor2.writeSync(0);
-  res.send('uit')
+app.get('/feederuit', (req, res) => {
+  motor1.writeSync(1);
+  res.send('uit feeder')
 })
+
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
